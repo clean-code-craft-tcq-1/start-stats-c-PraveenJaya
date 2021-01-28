@@ -6,7 +6,7 @@
 #include <math.h>
 
 TEST_CASE("reports average, minimum and maximum") {
-    float numberset[] = {22.5,55.5,66.6,20.2,2};
+    float numberset[] = {22.5,55.5,20.2,2};
     int setlength = sizeof(numberset) / sizeof(numberset[0]);
     stats_s computedStats = {0,0,0};
     computedStats = compute_statistics(numberset, setlength);
