@@ -41,13 +41,14 @@ stats_s compute_statistics(float* numberset, int setlength)
 }
 
 /* Function name: check_and_alert
-   Function Brief- Alerts if threshold > max value
+   Function Brief- Alerts if max is > threshold
    Paramaters - float, alerter_funcptr, stats_s
    Return Type - void
 */
 
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], stats_s computedStats)
-{
+{ 
+    /* Call alerters if max is > threshold */
     if(computedStats.max > maxThreshold)
     {
         if(alerters[0] != NULL)
