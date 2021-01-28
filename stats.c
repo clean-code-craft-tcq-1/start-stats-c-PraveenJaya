@@ -21,7 +21,7 @@
             /* Calculate Average of numbers */
 	    for(itr=0;itr<setlen;itr++)
 	    {
-	        sum += numset[i];
+	        sum += numset[itr];
 	    }
 	    statData.average = sum/setlen;
 	    statData.min = numset[0];
