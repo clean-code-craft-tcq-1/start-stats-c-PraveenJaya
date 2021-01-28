@@ -7,7 +7,7 @@
 	    stats_t statData;
 	    
 	    /* Sorting the given number */
-	    for (i = 1; i < setlength; i++) 
+	    for (i = 1; i < setlen; i++) 
 	    { 
 	        key = numset[i]; 
 	        j = i - 1; 
@@ -19,13 +19,13 @@
 	    }
         
         /* Average of numbers */
-	    for(i=0;i<setlength;i++)
+	    for(i=0;i<setlen;i++)
 	    {
 	        sum += numset[i];
 	    }
-	    statData.average = sum/setlength;
+	    statData.average = sum/setlen;
 	    statData.min = numset[0];
-	    statData.max = numset[setlength-1]; 
+	    statData.max = numset[setlen-1]; 
 	
 	    return statData;
 	}
