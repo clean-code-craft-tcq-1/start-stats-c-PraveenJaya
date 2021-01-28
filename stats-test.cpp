@@ -6,7 +6,7 @@
 #include <math.h>
 
 TEST_CASE("reports average, minimum and maximum") {
-    float numberset[] = {1.5, 8.9, 3.2, 4.5};
+    float numberset[] = {22.5,55.5,66.6,20.2,2};
     int setlength = sizeof(numberset) / sizeof(numberset[0]);
     stats_s computedStats = {0,0,0};
     computedStats = compute_statistics(numberset, setlength);
@@ -29,7 +29,7 @@ TEST_CASE("average is NaN for empty array") {
 TEST_CASE("do not raises alerts when max is lesser than threshold") {
     alerter_funcptr alerters[] = {emailAlerter, ledAlerter};
 
-    float numberset[] = {99.8, 34.2, 4.5};
+    float numberset[] = {11,55.5,46.6,8.5};
     int setlength = sizeof(numberset) / sizeof(numberset[0]);
     stats_s computedStats = compute_statistics(numberset, setlength);
 
